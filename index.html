@@ -1,65 +1,715 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhavishya Parjapati | Gaming & Trading Setup | RTX 4060 Edition</title>
-    <meta name="description" content="The official hardware configuration of Digital Architect Bhavishya Parjapati. RTX 4060, Custom Build, Trading Station.">
-    
-    <style>
-        body { background: #000; color: #0f0; font-family: 'Courier New', monospace; padding: 20px; text-align: center; }
-        .container { max-width: 800px; margin: 0 auto; border: 1px solid #0f0; padding: 20px; box-shadow: 0 0 20px rgba(0,255,0,0.2); }
-        h1 { text-transform: uppercase; border-bottom: 1px dashed #0f0; padding-bottom: 10px; }
-        .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; margin-top: 20px; }
-        .spec-item { border: 1px solid #333; padding: 10px; }
-        .spec-label { color: #888; font-size: 0.8rem; }
-        .spec-val { font-weight: bold; color: #fff; }
-        
-        .back-link { display: block; margin-top: 30px; padding: 15px; background: #0f0; color: #000; text-decoration: none; font-weight: bold; text-transform: uppercase; }
-        .back-link:hover { background: #fff; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>My Setup -- Command Center | Bhvsy OS | Bhavishya Parjapati</title>
+  <meta name="description" content="The official hardware command center of Bhavishya Parjapati. RTX 4060 powered custom rig built for high-frequency trading, AI inference, game development, and digital architecture." />
+  <meta name="author" content="Bhavishya Parjapati" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bhvsy.github.io/my-setup/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Bhvsy OS" />
+  <meta property="og:title" content="My Setup -- Command Center | Bhvsy OS" />
+  <meta property="og:description" content="RTX 4060 powered command center by Bhavishya Parjapati. Custom-built for trading, AI inference, and digital architecture." />
+  <meta property="og:url" content="https://bhvsy.github.io/my-setup/" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="My Setup -- Command Center | Bhvsy OS" />
+  <meta name="twitter:description" content="RTX 4060 powered command center by Bhavishya Parjapati." />
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#030308" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "My Setup -- Command Center | Bhvsy OS",
+    "description": "Hardware command center of Bhavishya Parjapati. RTX 4060 custom rig for trading, AI, and development.",
+    "url": "https://bhvsy.github.io/my-setup/",
+    "author": {
+      "@type": "Person",
+      "name": "Bhavishya Parjapati",
+      "url": "https://bhvsy.github.io"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Bhvsy OS",
+      "url": "https://bhvsy.github.io"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bhvsy.github.io" },
+        { "@type": "ListItem", "position": 2, "name": "My Setup", "item": "https://bhvsy.github.io/my-setup/" }
+      ]
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg-void:      #030308;
+      --bg-card:      #080c1c;
+      --border-glass: rgba(0, 240, 255, 0.1);
+      --border-hover: rgba(0, 240, 255, 0.3);
+      --cyan:         #00f0ff;
+      --cyan-dim:     #00f0ff99;
+      --purple:       #a855f7;
+      --green:        #34d399;
+      --amber:        #fbbf24;
+      --red:          #f23645;
+      --magenta:      #f472b6;
+      --nvidia:       #76b900;
+      --intel:        #0071c5;
+      --text-primary: #e4e8f1;
+      --text-muted:   #7a8ba7;
+      --text-dim:     #4a5568;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body:    'Inter', sans-serif;
+      --font-mono:    'JetBrains Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: var(--cyan-dim) var(--bg-void); }
+
+    body {
+      font-family: var(--font-body); background: var(--bg-void);
+      color: var(--text-primary); min-height: 100vh;
+      overflow-x: hidden; line-height: 1.6; -webkit-font-smoothing: antialiased;
+    }
+
+    .bg-ambient {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      transform: translateZ(0); will-change: transform;
+      background:
+        linear-gradient(rgba(118,185,0,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(118,185,0,0.015) 1px, transparent 1px),
+        radial-gradient(ellipse 700px 500px at 25% 15%, rgba(118,185,0,0.04), transparent),
+        radial-gradient(ellipse 500px 400px at 80% 80%, rgba(0,240,255,0.035), transparent);
+      background-size: 60px 60px, 60px 60px, 100% 100%, 100% 100%;
+    }
+
+    .page-wrapper { position: relative; z-index: 1; max-width: 1000px; margin: 0 auto; padding: 0 24px 100px; }
+
+    /* ═══ NAV ═══ */
+    .top-nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 24px; background: rgba(3,3,8,0.92);
+      border-bottom: 1px solid var(--border-glass); margin: 0 -24px 40px;
+    }
+    .nav-brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo { width: 34px; height: 34px; border-radius: 8px; object-fit: contain; }
+    .nav-brand-text { display: flex; flex-direction: column; gap: 1px; }
+    .nav-brand-name { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: #fff; letter-spacing: -0.3px; }
+    .nav-brand-sub { font-family: var(--font-mono); font-size: 9.5px; color: var(--text-dim); letter-spacing: 1.5px; text-transform: uppercase; }
+    .nav-home-btn {
+      display: inline-flex; align-items: center; gap: 8px; padding: 9px 22px;
+      font-family: var(--font-mono); font-size: 12px; font-weight: 600;
+      letter-spacing: 1px; text-transform: uppercase; text-decoration: none;
+      color: var(--cyan); background: rgba(0,240,255,0.06);
+      border: 1px solid rgba(0,240,255,0.2); border-radius: 10px;
+      transition: background 0.25s ease, border-color 0.25s ease;
+    }
+    .nav-home-btn:hover { background: rgba(0,240,255,0.12); border-color: rgba(0,240,255,0.45); }
+    .nav-home-btn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ═══ TERMINAL ═══ */
+    .terminal-bar {
+      display: flex; align-items: center; gap: 10px; padding: 14px 22px;
+      background: #060a18; border: 1px solid var(--border-glass); border-radius: 12px 12px 0 0;
+    }
+    .td { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
+    .td.r { background: #ff5f57; } .td.y { background: #ffbd2e; } .td.g { background: #28c840; }
+    .tt { margin-left: 14px; font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); }
+    .tt span { color: var(--nvidia); }
+    .terminal-body {
+      background: #050919; border: 1px solid var(--border-glass); border-top: none;
+      border-radius: 0 0 12px 12px; padding: 24px 26px 20px; margin-bottom: 48px;
+    }
+    .tp { font-family: var(--font-mono); font-size: 13px; color: var(--text-muted); line-height: 1.9; }
+    .tp .c { color: var(--nvidia); } .tp .f { color: var(--cyan); }
+    .tp .s { color: var(--green); } .tp .cm { color: var(--text-dim); font-style: italic; }
+    .tp .w { color: var(--amber); }
+    .cursor { display: inline-block; width: 9px; height: 17px; background: var(--nvidia); margin-left: 4px; vertical-align: text-bottom; animation: blink 1s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    /* ═══ HEADER ═══ */
+    .section-header { text-align: center; margin-bottom: 56px; }
+    .section-badge {
+      display: inline-flex; align-items: center; gap: 8px; padding: 7px 18px;
+      font-family: var(--font-mono); font-size: 11px; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 2.5px; color: var(--nvidia);
+      background: rgba(118,185,0,0.08); border: 1px solid rgba(118,185,0,0.18);
+      border-radius: 999px; margin-bottom: 24px;
+    }
+    .section-badge::before {
+      content: ''; width: 6px; height: 6px; background: var(--nvidia);
+      border-radius: 50%; animation: pulse-dot 2.5s ease-in-out infinite;
+    }
+    @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+    .section-header h1 {
+      font-family: var(--font-display); font-size: clamp(30px, 5vw, 50px);
+      font-weight: 700; letter-spacing: -1.5px; line-height: 1.15;
+      background: linear-gradient(135deg, #fff 0%, var(--nvidia) 50%, var(--cyan) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      margin-bottom: 14px;
+    }
+    .section-header p { font-size: 15px; color: var(--text-muted); max-width: 620px; margin: 0 auto; }
+    .section-header p strong { color: var(--text-primary); font-weight: 500; }
+
+    /* ═══ HERO RIG CARD ═══ */
+    .rig-hero {
+      background: var(--bg-card); border: 1px solid var(--border-glass);
+      border-radius: 18px; padding: 36px 32px 28px; margin-bottom: 24px;
+      position: relative; overflow: hidden; transition: border-color 0.3s ease;
+    }
+    .rig-hero:hover { border-color: var(--border-hover); }
+    .rig-hero::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--nvidia), var(--cyan), transparent);
+      opacity: 0.6;
+    }
+
+    .rig-name-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 8px; }
+    .rig-codename { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: #fff; letter-spacing: -1px; }
+    .rig-tag {
+      font-family: var(--font-mono); font-size: 10px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 14px;
+      border-radius: 999px; color: var(--nvidia);
+      background: rgba(118,185,0,0.1); border: 1px solid rgba(118,185,0,0.2);
+    }
+    .rig-subtitle { font-family: var(--font-mono); font-size: 12px; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 28px; }
+
+    .rig-bars { display: flex; flex-direction: column; gap: 16px; }
+
+    .bar-item { display: flex; flex-direction: column; gap: 6px; }
+    .bar-head { display: flex; justify-content: space-between; align-items: center; }
+    .bar-label { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); letter-spacing: 0.5px; }
+    .bar-value { font-family: var(--font-mono); font-size: 11px; color: #fff; font-weight: 600; }
+    .bar-track { width: 100%; height: 6px; background: rgba(255,255,255,0.04); border-radius: 3px; overflow: hidden; }
+    .bar-fill {
+      height: 100%; border-radius: 3px;
+      animation: fillBar 1.2s ease-out forwards;
+      transform-origin: left;
+    }
+    @keyframes fillBar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    .bar-fill.gpu   { background: linear-gradient(90deg, var(--nvidia), #a3e635); width: 92%; animation-delay: 0.1s; }
+    .bar-fill.cpu   { background: linear-gradient(90deg, var(--intel), var(--cyan)); width: 78%; animation-delay: 0.25s; }
+    .bar-fill.ram   { background: linear-gradient(90deg, var(--purple), var(--magenta)); width: 65%; animation-delay: 0.4s; }
+    .bar-fill.stor  { background: linear-gradient(90deg, var(--cyan), var(--green)); width: 88%; animation-delay: 0.55s; }
+    .bar-fill.disp  { background: linear-gradient(90deg, var(--amber), #f97316); width: 85%; animation-delay: 0.7s; }
+
+    /* ═══ SPECS GRID ═══ */
+    .specs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+
+    .spec-card {
+      background: var(--bg-card); border: 1px solid var(--border-glass);
+      border-radius: 14px; padding: 22px 20px; position: relative;
+      overflow: hidden; transition: border-color 0.3s ease;
+    }
+    .spec-card:hover { border-color: var(--border-hover); }
+    .spec-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      opacity: 0; transition: opacity 0.3s ease;
+    }
+    .spec-card:hover::before { opacity: 1; }
+
+    .spec-card:nth-child(1)::before { background: linear-gradient(90deg, transparent, rgba(118,185,0,0.3), transparent); }
+    .spec-card:nth-child(2)::before { background: linear-gradient(90deg, transparent, rgba(0,113,197,0.3), transparent); }
+    .spec-card:nth-child(3)::before { background: linear-gradient(90deg, transparent, rgba(168,85,247,0.3), transparent); }
+    .spec-card:nth-child(4)::before { background: linear-gradient(90deg, transparent, rgba(0,240,255,0.25), transparent); }
+    .spec-card:nth-child(5)::before { background: linear-gradient(90deg, transparent, rgba(251,191,36,0.25), transparent); }
+    .spec-card:nth-child(6)::before { background: linear-gradient(90deg, transparent, rgba(52,211,153,0.25), transparent); }
+
+    .spec-icon { font-size: 22px; margin-bottom: 14px; display: block; }
+    .spec-label-top {
+      font-family: var(--font-mono); font-size: 10px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 2px; color: var(--text-dim); margin-bottom: 8px;
+    }
+    .spec-main { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; line-height: 1.3; }
+    .spec-sub { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); line-height: 1.6; letter-spacing: 0.3px; }
+
+    /* Color accent per card */
+    .spec-card:nth-child(1) .spec-main { color: var(--nvidia); }
+    .spec-card:nth-child(2) .spec-main { color: var(--intel); }
+
+    /* ═══ USE CASES ═══ */
+    .use-section-label {
+      font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 2px; color: var(--text-dim);
+      margin-bottom: 20px; margin-top: 8px;
+    }
+
+    .use-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 48px; }
+
+    .use-card {
+      background: var(--bg-card); border: 1px solid var(--border-glass);
+      border-radius: 12px; padding: 20px 16px; text-align: center;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .use-card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+    .use-icon { font-size: 26px; margin-bottom: 12px; display: block; }
+    .use-title { font-family: var(--font-display); font-size: 13px; font-weight: 600; color: #fff; margin-bottom: 6px; }
+    .use-desc { font-family: var(--font-mono); font-size: 9.5px; color: var(--text-dim); line-height: 1.6; letter-spacing: 0.3px; }
+
+    /* ═══ SOFTWARE STACK ═══ */
+    .stack-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 48px; }
+
+    .stack-card {
+      background: var(--bg-card); border: 1px solid var(--border-glass);
+      border-radius: 14px; padding: 24px; transition: border-color 0.3s ease;
+    }
+    .stack-card:hover { border-color: var(--border-hover); }
+    .stack-card h2 {
+      font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 2px; color: var(--text-dim); margin-bottom: 18px;
+    }
+
+    .sw-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .sw-row:last-child { border-bottom: none; }
+    .sw-name { font-family: var(--font-mono); font-size: 12px; color: #fff; font-weight: 500; }
+    .sw-tag {
+      font-family: var(--font-mono); font-size: 9px; font-weight: 700;
+      letter-spacing: 1.2px; text-transform: uppercase; padding: 2px 10px;
+      border-radius: 999px;
+    }
+    .sw-tag.os      { color: var(--cyan); background: rgba(0,240,255,0.08); border: 1px solid rgba(0,240,255,0.12); }
+    .sw-tag.trading { color: var(--green); background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.12); }
+    .sw-tag.dev     { color: var(--purple); background: rgba(168,85,247,0.08); border: 1px solid rgba(168,85,247,0.12); }
+    .sw-tag.ai      { color: var(--magenta); background: rgba(244,114,182,0.08); border: 1px solid rgba(244,114,182,0.12); }
+    .sw-tag.browser { color: var(--amber); background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.12); }
+    .sw-tag.game    { color: var(--nvidia); background: rgba(118,185,0,0.08); border: 1px solid rgba(118,185,0,0.12); }
+
+    /* ═══ PHILOSOPHY CARD ═══ */
+    .philosophy-card {
+      background: var(--bg-card); border: 1px solid var(--border-glass);
+      border-radius: 14px; padding: 28px; margin-bottom: 32px;
+      transition: border-color 0.3s ease;
+    }
+    .philosophy-card:hover { border-color: var(--border-hover); }
+    .philosophy-card h2 {
+      font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 2px; color: var(--text-dim); margin-bottom: 16px;
+    }
+    .philosophy-card p { font-size: 14px; line-height: 1.8; color: var(--text-muted); }
+    .philosophy-card p strong { color: var(--text-primary); font-weight: 500; }
+
+    /* ═══ LIVE GPU TELEMETRY ═══ */
+    .telemetry-bar {
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+      gap: 16px; padding: 18px 24px; margin-bottom: 32px;
+      background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 12px;
+    }
+
+    .telem-item { display: flex; flex-direction: column; gap: 2px; }
+    .telem-label { font-family: var(--font-mono); font-size: 9px; color: var(--text-dim); letter-spacing: 1.5px; text-transform: uppercase; }
+    .telem-value { font-family: var(--font-mono); font-size: 18px; font-weight: 700; }
+    .telem-value.nv { color: var(--nvidia); }
+    .telem-value.cy { color: var(--cyan); }
+    .telem-value.pu { color: var(--purple); }
+    .telem-value.am { color: var(--amber); }
+
+    .telem-value .unit { font-size: 10px; color: var(--text-dim); font-weight: 500; margin-left: 2px; }
+
+    /* Simulated counter animation */
+    .counter { display: inline; }
+
+    /* ═══ CTA ═══ */
+    .cta-btn {
+      display: block; width: 100%; text-align: center; padding: 18px;
+      font-family: var(--font-mono); font-size: 13px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase; text-decoration: none;
+      color: var(--bg-void); background: linear-gradient(135deg, var(--nvidia), #a3e635);
+      border-radius: 12px; margin-bottom: 24px;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* ═══ FOOTER ═══ */
+    .status-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px; padding: 16px 24px; background: #060a18;
+      border: 1px solid var(--border-glass); border-radius: 12px;
+      font-family: var(--font-mono); font-size: 11px; color: var(--text-dim);
+    }
+    .sb-indicator { display: flex; align-items: center; gap: 8px; }
+    .sb-dot { width: 7px; height: 7px; background: var(--nvidia); border-radius: 50%; animation: pulse-dot 2.5s ease-in-out infinite; }
+    .sb-live { color: var(--nvidia); font-weight: 500; }
+    .sb-link { color: var(--text-muted); text-decoration: none; transition: color 0.2s; display: inline-flex; align-items: center; gap: 6px; }
+    .sb-link:hover { color: var(--cyan); }
+    .sb-link svg { width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .sb-sig { color: var(--text-dim); }
+    .sb-sig span { color: var(--nvidia); font-weight: 700; }
+
+    /* ═══ RESPONSIVE ═══ */
+    @media (max-width: 768px) {
+      .specs-grid { grid-template-columns: repeat(2, 1fr); }
+      .use-grid { grid-template-columns: repeat(2, 1fr); }
+      .stack-grid { grid-template-columns: 1fr; }
+      .telemetry-bar { justify-content: flex-start; }
+    }
+    @media (max-width: 640px) {
+      .page-wrapper { padding: 0 16px 80px; }
+      .top-nav { margin: 0 -16px 32px; padding: 14px 16px; }
+      .nav-brand-name { font-size: 14px; }
+      .nav-home-btn { padding: 8px 14px; font-size: 11px; }
+      .terminal-bar { padding: 12px 16px; }
+      .terminal-body { padding: 18px 16px 16px; }
+      .specs-grid { grid-template-columns: 1fr; }
+      .use-grid { grid-template-columns: 1fr 1fr; }
+      .rig-hero { padding: 28px 22px 22px; }
+      .rig-codename { font-size: 22px; }
+      .telemetry-bar { flex-direction: column; align-items: flex-start; gap: 14px; }
+      .status-bar { flex-direction: column; align-items: flex-start; gap: 8px; padding: 14px 18px; }
+    }
+    @media (max-width: 400px) {
+      .use-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <div class="bg-ambient"></div>
 
-    <div class="container">
-        <h1>// SYSTEM_HARDWARE //</h1>
-        <p>OPERATOR: BHAVISHYA PARJAPATI</p>
-        
-        <div class="spec-grid">
-            <div class="spec-item">
-                <div class="spec-label">GPU UNIT</div>
-                <div class="spec-val">NVIDIA GeForce RTX 4060</div>
-            </div>
-            <div class="spec-item">
-                <div class="spec-label">CPU CORE</div>
-                <div class="spec-val">Intel Core i5 (12th Gen)</div>
-            </div>
-            <div class="spec-item">
-                <div class="spec-label">MEMORY</div>
-                <div class="spec-val">16GB DDR4 3200MHz</div>
-            </div>
-            <div class="spec-item">
-                <div class="spec-label">STORAGE</div>
-                <div class="spec-val">1TB NVMe SSD Gen4</div>
-            </div>
-            <div class="spec-item">
-                <div class="spec-label">DISPLAY</div>
-                <div class="spec-val">165Hz IPS Panel</div>
-            </div>
-            <div class="spec-item">
-                <div class="spec-label">OS</div>
-                <div class="spec-val">Windows 11 / Bhvsy OS</div>
-            </div>
+  <div class="page-wrapper">
+
+    <!-- NAV -->
+    <nav class="top-nav" aria-label="Main navigation">
+      <a href="https://bhvsy.github.io" class="nav-brand" aria-label="Bhvsy OS Home">
+        <img src="/favicon-32x32.png" alt="Bhvsy OS Logo" class="nav-logo" width="34" height="34" />
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">Bhvsy OS</span>
+          <span class="nav-brand-sub">My Setup</span>
         </div>
+      </a>
+      <a href="https://bhvsy.github.io" class="nav-home-btn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6" /></svg>
+        Home
+      </a>
+    </nav>
 
-        <div style="margin-top: 30px; border-top: 1px dashed #333; padding-top: 20px;">
-            <p>This system is used for high-frequency trading and digital architecture development.</p>
-        </div>
-
-        <a href="https://bhvsy.github.io/" class="back-link">
-            &lt;&lt; RETURN TO MAIN CONSOLE
-        </a>
+    <!-- TERMINAL -->
+    <div class="terminal-bar" role="presentation">
+      <span class="td r"></span><span class="td y"></span><span class="td g"></span>
+      <span class="tt"><span>bhvsy@rig</span>:~/hardware $</span>
     </div>
+    <div class="terminal-body">
+      <div class="tp">
+        <span class="cm">// scanning hardware configuration...</span><br />
+        <span class="c">detect</span> <span class="f">--gpu</span> <span class="s">"NVIDIA GeForce RTX 4060"</span> <span class="w">[8GB GDDR6]</span><br />
+        <span class="c">detect</span> <span class="f">--cpu</span> <span class="s">"Intel Core i5-12th Gen"</span> <span class="w">[Alder Lake]</span><br />
+        <span class="c">detect</span> <span class="f">--ram</span> <span class="s">"16GB DDR4"</span> <span class="f">--freq</span> <span class="s">"3200MHz"</span><br />
+        <span class="c">detect</span> <span class="f">--storage</span> <span class="s">"1TB NVMe SSD Gen4"</span><br />
+        <span class="c">status</span> <span class="f">--all</span><br />
+        <span class="cm">// ✓ all subsystems operational · rig online</span><span class="cursor"></span>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="section-header">
+      <div class="section-badge">Hardware Bay</div>
+      <h1>Command Center</h1>
+      <p>The machine behind <strong>Bhvsy OS</strong> -- purpose-built for <strong>trading execution</strong>, <strong>AI inference</strong>, <strong>game sessions</strong>, and <strong>full-stack development</strong>.</p>
+    </header>
+
+    <!-- LIVE TELEMETRY BAR -->
+    <div class="telemetry-bar">
+      <div class="telem-item">
+        <span class="telem-label">GPU Power</span>
+        <span class="telem-value nv"><span class="counter" id="telem-tflops">0</span><span class="unit">TFLOPS</span></span>
+      </div>
+      <div class="telem-item">
+        <span class="telem-label">CUDA Cores</span>
+        <span class="telem-value cy"><span class="counter" id="telem-cuda">0</span></span>
+      </div>
+      <div class="telem-item">
+        <span class="telem-label">VRAM</span>
+        <span class="telem-value pu">8<span class="unit">GB GDDR6</span></span>
+      </div>
+      <div class="telem-item">
+        <span class="telem-label">Memory Bus</span>
+        <span class="telem-value am">128<span class="unit">-bit</span></span>
+      </div>
+      <div class="telem-item">
+        <span class="telem-label">Uptime</span>
+        <span class="telem-value cy" id="telem-uptime">00:00:00</span>
+      </div>
+    </div>
+
+    <!-- HERO RIG CARD -->
+    <div class="rig-hero">
+      <div class="rig-name-row">
+        <span class="rig-codename">BHVSY-RIG // RTX 4060 Edition</span>
+        <span class="rig-tag">Custom Build</span>
+      </div>
+      <div class="rig-subtitle">OPERATOR: BHAVISHYA PARJAPATI · CLASSIFICATION: MULTI-PURPOSE WORKSTATION</div>
+
+      <div class="rig-bars">
+        <div class="bar-item">
+          <div class="bar-head">
+            <span class="bar-label">GPU -- RTX 4060 Ada Lovelace</span>
+            <span class="bar-value">92%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill gpu"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-head">
+            <span class="bar-label">CPU -- Intel i5 12th Gen Alder Lake</span>
+            <span class="bar-value">78%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill cpu"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-head">
+            <span class="bar-label">RAM -- 16GB DDR4 3200MHz</span>
+            <span class="bar-value">65%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill ram"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-head">
+            <span class="bar-label">Storage -- 1TB NVMe SSD Gen4</span>
+            <span class="bar-value">88%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill stor"></div></div>
+        </div>
+        <div class="bar-item">
+          <div class="bar-head">
+            <span class="bar-label">Display -- 165Hz IPS Panel</span>
+            <span class="bar-value">85%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill disp"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPEC CARDS -->
+    <section class="specs-grid">
+
+      <div class="spec-card">
+        <span class="spec-icon">🟢</span>
+        <div class="spec-label-top">GPU Unit</div>
+        <div class="spec-main">NVIDIA RTX 4060</div>
+        <div class="spec-sub">Ada Lovelace · 8GB GDDR6<br />3072 CUDA · 15.11 TFLOPS FP32</div>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🔵</span>
+        <div class="spec-label-top">CPU Core</div>
+        <div class="spec-main">Intel Core i5 12th Gen</div>
+        <div class="spec-sub">Alder Lake Architecture<br />Hybrid P-Core + E-Core Design</div>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🟣</span>
+        <div class="spec-label-top">Memory</div>
+        <div class="spec-main">16GB DDR4</div>
+        <div class="spec-sub">3200MHz · Dual Channel<br />Low-latency Trading + Dev</div>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🔷</span>
+        <div class="spec-label-top">Storage</div>
+        <div class="spec-main">1TB NVMe SSD</div>
+        <div class="spec-sub">PCIe Gen4 · Sequential R/W<br />7000/5500 MB/s Class</div>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🟡</span>
+        <div class="spec-label-top">Display</div>
+        <div class="spec-main">165Hz IPS Panel</div>
+        <div class="spec-sub">Low Response Time<br />Color-Accurate for Charting</div>
+      </div>
+
+      <div class="spec-card">
+        <span class="spec-icon">🟢</span>
+        <div class="spec-label-top">Operating System</div>
+        <div class="spec-main">Windows 11 / Bhvsy OS</div>
+        <div class="spec-sub">Dual-Layer Environment<br />Custom Configurations</div>
+      </div>
+
+    </section>
+
+    <!-- USE CASES -->
+    <div class="use-section-label">What This Machine Does</div>
+    <section class="use-grid">
+      <div class="use-card">
+        <span class="use-icon">📈</span>
+        <div class="use-title">Live Trading</div>
+        <div class="use-desc">Real-time execution on Forex & Crypto markets with sub-millisecond chart rendering</div>
+      </div>
+      <div class="use-card">
+        <span class="use-icon">🤖</span>
+        <div class="use-title">AI Inference</div>
+        <div class="use-desc">Local Stable Diffusion, LoRA training, and LLM experiments on 8GB VRAM</div>
+      </div>
+      <div class="use-card">
+        <span class="use-icon">🎮</span>
+        <div class="use-title">Gaming</div>
+        <div class="use-desc">High-FPS gaming at 1080p/1440p with DLSS 3 frame generation</div>
+      </div>
+      <div class="use-card">
+        <span class="use-icon">💻</span>
+        <div class="use-title">Development</div>
+        <div class="use-desc">Full-stack web dev, Chrome extension builds, PWA engineering</div>
+      </div>
+    </section>
+
+    <!-- SOFTWARE STACK -->
+    <section class="stack-grid">
+      <div class="stack-card">
+        <h2>Trading Stack</h2>
+        <div class="sw-row">
+          <span class="sw-name">MetaTrader 4/5</span>
+          <span class="sw-tag trading">Platform</span>
+        </div>
+        <div class="sw-row">
+          <span class="sw-name">TradingView</span>
+          <span class="sw-tag trading">Charting</span>
+        </div>
+        <div class="sw-row">
+          <span class="sw-name">News Guard Ext.</span>
+          <span class="sw-tag trading">Custom Tool</span>
+        </div>
+        <div class="sw-row">
+          <span class="sw-name">Prop Firm Dashboards</span>
+          <span class="sw-tag trading">Risk Mgmt</span>
+        </div>
+      </div>
+
+      <div class="stack-card">
+        <h2>Dev &amp; AI Stack</h2>
+        <div class="sw-row">
+          <span class="sw-name">VS Code</span>
+          <span class="sw-tag dev">Editor</span>
+        </div>
+        <div class="sw-row">
+          <span class="sw-name">Chrome DevTools</span>
+          <span class="sw-tag browser">Debug</span>
+        </div>
+        <div class="sw-row">
+          <span class="sw-name">Stable Diffusion</span>
+          <span class="sw-tag ai">Gen AI</span>
+        </div>
+        <div class="sw-row">
+          <span class="sw-name">Windows 11</span>
+          <span class="sw-tag os">Base OS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <div class="philosophy-card">
+      <h2>Build Philosophy</h2>
+      <p>
+        This rig wasn't assembled for benchmarks -- it was engineered for <strong>execution</strong>.
+        Every component was chosen to serve the three pillars of the Bhvsy OS ecosystem:
+        <strong>trading infrastructure</strong> that doesn't lag under volatility,
+        <strong>AI compute</strong> that runs locally without cloud dependency, and
+        <strong>development throughput</strong> that ships tools fast. The RTX 4060 sits at the
+        center -- handling GPU-accelerated charting, CUDA inference for Stable Diffusion, and
+        DLSS-powered gaming sessions when the markets close.
+      </p>
+    </div>
+
+    <!-- CTA -->
+    <a href="https://bhvsy.github.io" class="cta-btn">Return to Main Console</a>
+
+    <!-- FOOTER -->
+    <footer class="status-bar">
+      <div class="sb-indicator">
+        <span class="sb-dot"></span>
+        <span class="sb-live">RIG ONLINE</span>
+      </div>
+      <a href="https://bhvsy.github.io" class="sb-link">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+        bhvsy.github.io
+      </a>
+      <span class="sb-sig">built by <span>Bhavishya Parjapati</span></span>
+    </footer>
+
+  </div>
+
+  <script>
+    /* ═══════════════════════════════════════
+       ANIMATED COUNTERS (TFLOPS + CUDA)
+       Real specs: RTX 4060 = 15.11 TFLOPS, 3072 CUDA
+       ═══════════════════════════════════════ */
+    function animateCounter(id, target, duration, decimal) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const start = performance.now();
+      function tick(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = eased * target;
+        el.textContent = decimal ? current.toFixed(2) : Math.round(current).toLocaleString();
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    animateCounter('telem-tflops', 15.11, 1800, true);
+    animateCounter('telem-cuda', 3072, 1800, false);
+
+    /* ═══════════════════════════════════════
+       SIMULATED UPTIME COUNTER
+       Starts from 00:00:00, ticks every second
+       ═══════════════════════════════════════ */
+    let uptimeSeconds = 0;
+    function tickUptime() {
+      uptimeSeconds++;
+      const h = Math.floor(uptimeSeconds / 3600).toString().padStart(2, '0');
+      const m = Math.floor((uptimeSeconds % 3600) / 60).toString().padStart(2, '0');
+      const s = (uptimeSeconds % 60).toString().padStart(2, '0');
+      document.getElementById('telem-uptime').textContent = h + ':' + m + ':' + s;
+    }
+    setInterval(tickUptime, 1000);
+
+    /* ═══════════════════════════════════════
+       BAR FILL ANIMATION TRIGGER ON LOAD
+       ═══════════════════════════════════════ */
+    document.querySelectorAll('.bar-fill').forEach(function (bar) {
+      bar.style.transform = 'scaleX(0)';
+    });
+    window.addEventListener('load', function () {
+      document.querySelectorAll('.bar-fill').forEach(function (bar) {
+        bar.style.transform = '';
+      });
+    });
+  </script>
 
 </body>
 </html>
